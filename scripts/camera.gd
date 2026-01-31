@@ -17,7 +17,8 @@ enum MouseControls {
 
 
 func _ready() -> void:
-	print(Vars.test)
+	position.x = 0
+	position.y = 0
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
