@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b68kwpurh6i5k"]
 
+[ext_resource type="Script" uid="uid://uqbdxob58yky" path="res://scenes/button.gd" id="1_uxvdx"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_327hm"]
 bg_color = Color(0.4862745, 0.8, 0.6156863, 1)
 corner_radius_top_right = 10
@@ -12,14 +14,19 @@ bg_color = Color(1.6364455e-06, 0.6786777, 0.7395539, 1)
 corner_radius_top_left = 10
 corner_radius_bottom_right = 10
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_327hm"]
+
+[sub_resource type="SystemFont" id="SystemFont_327hm"]
+font_names = PackedStringArray("Consolas")
+
 [node name="TopMenu" type="CanvasLayer" unique_id=1907492476]
 scale = Vector2(1.1, 1.1)
 transform = Transform2D(1.1, 0, 0, 1.1, 0, 0)
 
 [node name="Panel" type="Panel" parent="." unique_id=765298844]
-offset_top = 26.0
-offset_right = 332.0
-offset_bottom = 70.27272
+offset_top = 43.63636
+offset_right = 114.54545
+offset_bottom = 104.09091
 scale = Vector2(2, 2)
 size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_327hm")
@@ -31,26 +38,29 @@ offset_right = 111.0
 offset_bottom = 71.0
 scale = Vector2(2, 2)
 
-[node name="Button" type="Button" parent="." unique_id=342166308]
-offset_left = 13.636363
-offset_top = 41.81818
-offset_right = 268.1818
-offset_bottom = 96.818184
-theme = SubResource("Theme_327hm")
-theme_type_variation = &"FlatButton"
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_uxvdx")
-text = "Add Building"
-clip_text = true
-
 [node name="Button2" type="Button" parent="." unique_id=382322479]
-offset_left = 280.0
-offset_top = 40.0
-offset_right = 481.81815
-offset_bottom = 95.0
+offset_left = 10.0
+offset_top = 91.81818
+offset_right = 211.81815
+offset_bottom = 146.81818
 theme = SubResource("Theme_327hm")
 theme_type_variation = &"FlatButton"
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_uxvdx")
 text = "Save Map"
 clip_text = true
+script = ExtResource("1_uxvdx")
+
+[node name="Label" type="Label" parent="." unique_id=2013469472]
+material = SubResource("ShaderMaterial_327hm")
+offset_left = 12.727273
+offset_top = 56.363636
+offset_right = 136.36363
+offset_bottom = 79.36363
+theme_override_colors/font_color = Color(0, 0.60784316, 0.8666667, 1)
+theme_override_fonts/font = SubResource("SystemFont_327hm")
+theme_override_font_sizes/font_size = 22
+text = "Genesis CB"
+
+[connection signal="mouse_entered" from="Button2" to="Button2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="Button2" method="_on_mouse_exited"]

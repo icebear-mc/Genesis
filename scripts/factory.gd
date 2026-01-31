@@ -3,7 +3,7 @@ extends Node2D
 var hovered = false
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("del_node") and hovered:
+	if Input.is_action_just_pressed("del_node") and hovered and Vars.can_place_buildings:
 		queue_free()
 
 func _ready() -> void:

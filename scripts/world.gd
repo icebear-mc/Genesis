@@ -14,5 +14,5 @@ func spawn_factory(position: Vector2):
 	add_child(factory_instance)
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("summon_node"):
+	if Input.is_action_just_pressed("summon_node") and Vars.can_place_buildings:
 		spawn_factory(snap_to_grid(get_global_mouse_position()))
