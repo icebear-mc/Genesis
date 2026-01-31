@@ -10,9 +10,9 @@ enum MouseControls {
 	both
 }
 
-@export var zoom_speed := 0.08
-@export var min_zoom := 0.4
-@export var max_zoom := 3.0
+@export var zoom_speed := 0.04
+@export var min_zoom := 0.1
+@export var max_zoom := 2.5
 @export var controls : MouseControls = MouseControls.both
 
 

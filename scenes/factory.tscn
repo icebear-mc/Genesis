@@ -3,8 +3,20 @@
 [ext_resource type="Script" uid="uid://birg1r62jnneh" path="res://scripts/factory.gd" id="1_lmr8u"]
 [ext_resource type="Texture2D" uid="uid://c8clireu31ku4" path="res://assets/icons/icon.svg" id="2_1adwy"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmr8u"]
+size = Vector2(128, 126)
+
 [node name="Factory" type="Node2D" unique_id=1785093742]
 script = ExtResource("1_lmr8u")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=263640437]
 texture = ExtResource("2_1adwy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=867176720]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1597121610]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_lmr8u")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

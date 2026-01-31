@@ -15,6 +15,4 @@ func spawn_factory(position: Vector2):
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		var mouse_wrld = get_global_mouse_position()
-		var snapped_pos = snap_to_grid(mouse_wrld)
-		spawn_factory(snapped_pos)
+		spawn_factory(snap_to_grid(get_global_mouse_position()))
