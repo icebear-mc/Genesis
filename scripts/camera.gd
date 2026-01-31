@@ -22,22 +22,23 @@ func _ready() -> void:
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
+		
 		if controls != MouseControls.both:
 			if event.button_index == controls:
 				dragging = event.pressed
 		else:
 			if event.button_index == MOUSE_BUTTON_LEFT or event.button_index == MOUSE_BUTTON_RIGHT:
 				dragging = event.pressed
-			
-		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			zoom -= Vector2.ONE * zoom_speed
-			
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			zoom += Vector2.ONE * zoom_speed
+				
+		match event.button_index:
+			MOUSE_BUTTON_WHEEL_DOWN:
+				zoom -= Vector2.ONE * zoom_speed
+				
+			MOUSE_BUTTON_WHEEL_DOWN:
+				zoom += Vector2.ONE * zoom_speed
 			
 	if event is InputEventMouseMotion and dragging:
 		global_position -= event.relative / zoom
-			
 			
 	zoom.x = clamp(zoom.x, min_zoom, max_zoom)
 	zoom.y = zoom.x
