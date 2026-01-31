@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://i1llvpr4t60a"]
+
+[ext_resource type="Script" uid="uid://birg1r62jnneh" path="res://scripts/factory.gd" id="1_lmr8u"]
+[ext_resource type="Texture2D" uid="uid://c8clireu31ku4" path="res://assets/icons/icon.svg" id="2_1adwy"]
+
+[node name="Factory" type="Node2D" unique_id=1785093742]
+script = ExtResource("1_lmr8u")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=263640437]
+texture = ExtResource("2_1adwy")
