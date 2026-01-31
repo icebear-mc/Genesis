@@ -6,6 +6,7 @@ var drag_controller
 enum MouseControls {
 	left_button = MOUSE_BUTTON_LEFT,
 	right_button = MOUSE_BUTTON_RIGHT,
+	middle_button = MOUSE_BUTTON_MIDDLE,
 	both
 }
 
@@ -39,4 +40,3 @@ func _unhandled_input(event):
 			
 	zoom.x = clamp(zoom.x, min_zoom, max_zoom)
 	zoom.y = zoom.x
-	

@@ -6,6 +6,10 @@
 [node name="World" type="Node2D" unique_id=1580335908]
 
 [node name="Camera" type="Camera2D" parent="." unique_id=550772349]
+limit_enabled = false
+position_smoothing_enabled = true
+position_smoothing_speed = 16.0
 script = ExtResource("1_nnsk1")
+controls = 3
 
 [node name="Factory" parent="." unique_id=1785093742 instance=ExtResource("2_rwgxs")]
