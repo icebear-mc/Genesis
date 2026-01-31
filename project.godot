@@ -20,6 +20,10 @@ config/icon="res://assets/icons/icon.svg"
 
 Vars="*uid://crvfafrk7pffb"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/grid_display/plugin.cfg")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
