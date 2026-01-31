@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Genesis"
-config/version="0.2.0a"
+config/version="0.2.1"
 run/main_scene="uid://cxwoig5vohwof"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/icons/icon.svg"

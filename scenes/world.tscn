@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cdocl7iddro7f" path="res://scripts/world.gd" id="1_4wyf3"]
 [ext_resource type="Script" uid="uid://bc322lg8cao7v" path="res://scripts/camera.gd" id="1_nnsk1"]
 [ext_resource type="Script" uid="uid://ci3kbpegl8abm" path="res://addons/grid_display/grid_display.gd" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://b68kwpurh6i5k" path="res://scenes/top_menu.tscn" id="4_k0juu"]
 
 [node name="World" type="Node2D" unique_id=1580335908]
 script = ExtResource("1_4wyf3")
@@ -24,3 +25,5 @@ cell_size = Vector2(128, 128)
 vline_color = Color(0, 0.7254902, 0.6156863, 0.45882353)
 hline_color = Color(0.101960786, 0.7529412, 0, 0.5137255)
 metadata/_custom_type_script = "uid://ci3kbpegl8abm"
+
+[node name="TopMenu" parent="." unique_id=498499722 instance=ExtResource("4_k0juu")]

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b68kwpurh6i5k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_327hm"]
+bg_color = Color(0.4862745, 0.8, 0.6156863, 1)
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="Theme" id="Theme_327hm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxvdx"]
+bg_color = Color(1.6364455e-06, 0.6786777, 0.7395539, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+
+[node name="TopMenu" type="CanvasLayer" unique_id=1907492476]
+
+[node name="Panel" type="Panel" parent="." unique_id=765298844]
+offset_top = 26.0
+offset_right = 332.0
+offset_bottom = 78.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_327hm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1650034011]
+offset_left = 5.0
+offset_top = 31.0
+offset_right = 111.0
+offset_bottom = 71.0
+
+[node name="Button" type="Button" parent="." unique_id=342166308]
+offset_left = 5.0
+offset_top = 36.0
+offset_right = 111.0
+offset_bottom = 67.0
+theme = SubResource("Theme_327hm")
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxvdx")
+text = "Add Building"
+
+[node name="Button2" type="Button" parent="." unique_id=382322479]
+offset_left = 115.0
+offset_top = 36.0
+offset_right = 197.0
+offset_bottom = 67.0
+theme = SubResource("Theme_327hm")
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxFlat_uxvdx")
+text = "Save Map"
