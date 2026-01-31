@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Genesis"
-config/version="0.2.1"
+config/version="0.2.2"
 run/main_scene="uid://cxwoig5vohwof"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/icons/icon.svg"
@@ -19,6 +19,14 @@ config/icon="res://assets/icons/icon.svg"
 [autoload]
 
 Vars="*uid://crvfafrk7pffb"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/scale=1.25
 
 [editor_plugins]
 
@@ -49,6 +57,7 @@ summon_node={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
