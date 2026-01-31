@@ -13,9 +13,9 @@ limit_enabled = false
 position_smoothing_enabled = true
 position_smoothing_speed = 16.0
 script = ExtResource("1_nnsk1")
-controls = 3
 
 [node name="GridDisplay" type="Node2D" parent="." unique_id=1307953482]
+position = Vector2(-3200, -3200)
 script = ExtResource("3_4wyf3")
 grid_size = Vector2(50, 50)
 line_size = Vector2(10, 10)
