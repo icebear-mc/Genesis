@@ -62,6 +62,12 @@ func _draw_rect():
 	var rect = Rect2(0, 0, grid_size.x * cell_size.x, grid_size.y * cell_size.y)
 	draw_rect(rect, border_color, false, border_width, false)
 
+func _ready() -> void:
+	var temp_cell_size_x = cell_size.x
+	var temp_cell_size_y = cell_size.y
+	
+	position.x = ((cell_size.x * grid_size.x / 2) * -1)
+	position.y = ((cell_size.y * grid_size.y / 2) * -1)
 
 func _draw_grid():
 	var hline_count = (grid_size.x)
