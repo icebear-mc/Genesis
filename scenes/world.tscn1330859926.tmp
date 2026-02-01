@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cxwoig5vohwof"]
+
+[ext_resource type="Script" uid="uid://cdocl7iddro7f" path="res://scripts/world.gd" id="1_4wyf3"]
+[ext_resource type="Script" uid="uid://ci3kbpegl8abm" path="res://addons/grid_display/grid_display.gd" id="3_4wyf3"]
+[ext_resource type="Script" uid="uid://dr3404cfpnn7s" path="res://scripts/camera.gd" id="4_71j4m"]
+[ext_resource type="PackedScene" uid="uid://b68kwpurh6i5k" path="res://scenes/top_menu.tscn" id="4_k0juu"]
+
+[node name="World" type="Node2D" unique_id=1580335908]
+script = ExtResource("1_4wyf3")
+
+[node name="Grid" type="Node2D" parent="." unique_id=1307953482]
+position = Vector2(-3200, -3200)
+script = ExtResource("3_4wyf3")
+grid_size = Vector2(50, 50)
+line_size = Vector2(10, 10)
+border_width = 10.0
+cell_size = Vector2(128, 128)
+vline_color = Color(0, 0.7254902, 0.6156863, 0.45882353)
+hline_color = Color(0.101960786, 0.7529412, 0, 0.5137255)
+metadata/_custom_type_script = "uid://ci3kbpegl8abm"
+
+[node name="TopMenu" parent="." unique_id=1907492476 instance=ExtResource("4_k0juu")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1927606445]
+limit_enabled = false
+limit_left = -3200
+limit_top = -3200
+limit_right = 3200
+limit_bottom = 3200
+script = ExtResource("4_71j4m")

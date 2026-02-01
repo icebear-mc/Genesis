@@ -1,11 +1,23 @@
 extends Node2D
 
 var hovered = false
+var can_produce = true
 
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("del_node") and hovered and Vars.can_place_buildings:
 		queue_free()
+		
+func process_frame():
+	if not can_produce:
+		return
+	
+	LogicSysFactory.consume_energy()
+	LogicSysFactory.produce()
+	
+	can_produce = false
+	await get_tree().create_timer(1.0).timeout
+	can_produce = true
 
 func _ready() -> void:
 	

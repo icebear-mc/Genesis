@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Genesis"
-config/version="0.2.6"
+config/version="0.3.0"
 run/main_scene="uid://cxwoig5vohwof"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0.50980395, 0.70980394, 1)
@@ -22,7 +22,7 @@ config/icon="res://assets/icons/icon.svg"
 Vars="*uid://crvfafrk7pffb"
 Funcs="*uid://53cg7sf0xhhq"
 Grid="*uid://dt6rltthqg5b1"
-LogicSys="*uid://bdaqeldhgbc1c"
+LogicSysFactory="*uid://bdaqeldhgbc1c"
 
 [display]
 

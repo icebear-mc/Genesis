@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://i1llvpr4t60a"]
 
 [ext_resource type="Script" uid="uid://birg1r62jnneh" path="res://scripts/factory.gd" id="1_lmr8u"]
-[ext_resource type="Texture2D" uid="uid://j5ukrupxctof" path="res://assets/icons/icon.svg" id="2_1adwy"]
+[ext_resource type="Texture2D" uid="uid://df154p8hu0k6y" path="res://assets/icons/factory.svg" id="2_lmr8u"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmr8u"]
-size = Vector2(130, 126)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1adwy"]
+radius = 61.03278
 
 [node name="Factory" type="Node2D" unique_id=1785093742 groups=["BuildingsToSave"]]
 script = ExtResource("1_lmr8u")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=263640437]
-texture = ExtResource("2_1adwy")
+texture = ExtResource("2_lmr8u")
 
 [node name="AreaBox" type="Area2D" parent="." unique_id=867176720]
 
 [node name="Collision" type="CollisionShape2D" parent="AreaBox" unique_id=1597121610]
-shape = SubResource("RectangleShape2D_lmr8u")
+shape = SubResource("CircleShape2D_1adwy")
 
 [connection signal="mouse_entered" from="AreaBox" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="AreaBox" to="." method="_on_area_2d_mouse_exited"]

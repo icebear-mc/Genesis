@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://uqbdxob58yky" path="res://scripts/save_map.gd" id="1_uxvdx"]
 [ext_resource type="Script" uid="uid://duie1iy7h6onq" path="res://scripts/load_map.gd" id="2_taxde"]
-[ext_resource type="Script" uid="uid://cnuahpnw7c6db" path="res://scenes/clear_map.gd" id="3_w6ndt"]
+[ext_resource type="Script" uid="uid://cnuahpnw7c6db" path="res://scripts/clear_map.gd" id="3_w6ndt"]
+[ext_resource type="Script" uid="uid://b5l7n5kgidr3e" path="res://scenes/money_label.gd" id="4_x4jqx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_taxde"]
 bg_color = Color(0.4862745, 0.8, 0.6156863, 1)
@@ -30,6 +31,16 @@ transform = Transform2D(1.1, 0, 0, 1.1, 0, 0)
 offset_top = 43.63636
 offset_right = 346.36362
 offset_bottom = 104.09091
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_taxde")
+
+[node name="BackgroundPanel2" type="Panel" parent="." unique_id=1146037344]
+offset_left = 1744.5454
+offset_top = 160.0
+offset_right = 2022.3141
+offset_bottom = 220.45454
+rotation = 3.1415927
 scale = Vector2(2, 2)
 size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_taxde")
@@ -83,6 +94,17 @@ theme_override_colors/font_color = Color(0, 0.60784316, 0.8666667, 1)
 theme_override_fonts/font = SubResource("SystemFont_5kft6")
 theme_override_font_sizes/font_size = 22
 text = "Genesis CB"
+
+[node name="Label" type="Label" parent="." unique_id=324546865]
+offset_left = 1221.8181
+offset_top = 46.363636
+offset_right = 1729.8181
+offset_bottom = 148.36365
+theme_override_font_sizes/font_size = 74
+text = "00000000000"
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("4_x4jqx")
 
 [connection signal="mouse_entered" from="SaveMap" to="SaveMap" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SaveMap" to="SaveMap" method="_on_mouse_exited"]
