@@ -10,7 +10,10 @@ script = ExtResource("1_4wyf3")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=550772349]
 scale = Vector2(-10.148525, 20.427828)
-limit_enabled = false
+limit_left = -4500
+limit_top = -4500
+limit_right = 4500
+limit_bottom = 4500
 position_smoothing_enabled = true
 position_smoothing_speed = 16.0
 script = ExtResource("1_nnsk1")
@@ -26,4 +29,4 @@ vline_color = Color(0, 0.7254902, 0.6156863, 0.45882353)
 hline_color = Color(0.101960786, 0.7529412, 0, 0.5137255)
 metadata/_custom_type_script = "uid://ci3kbpegl8abm"
 
-[node name="TopMenu" parent="." unique_id=498499722 instance=ExtResource("4_k0juu")]
+[node name="TopMenu" parent="." unique_id=1907492476 instance=ExtResource("4_k0juu")]

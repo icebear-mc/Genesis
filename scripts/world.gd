@@ -2,11 +2,10 @@ extends Node2D
 
 var Factory := preload("res://scenes/factory.tscn")
 
-func snap_to_grid(world_pos: Vector2):
-	return Vector2(
-		round((world_pos.x - Vars.grid_offset.x) / Vars.grid_size.x) * Vars.grid_size.x + Vars.grid_offset.x,
-		round((world_pos.y - Vars.grid_offset.y) / Vars.grid_size.y) * Vars.grid_size.y + Vars.grid_offset.y
-	)
+
+
+func _ready() -> void:
+	pass
 
 func spawn_factory(position: Vector2):
 	var factory_instance = Factory.instantiate()
@@ -15,4 +14,4 @@ func spawn_factory(position: Vector2):
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("summon_node") and Vars.can_place_buildings:
-		spawn_factory(snap_to_grid(get_global_mouse_position()))
+		spawn_factory(Funcs.snap_to_grid(get_global_mouse_position()))
