@@ -1,8 +1,5 @@
 extends Node
 
-var grid_size: Vector2 = Vector2(128, 128)
-var grid_offset: Vector2 = Vector2(64, 64)
-var grid_color := Color(1, 1, 1, 0.3)
-var grid_width := 1.0
-
 var can_place_buildings = true
+var energy = 50000
+var money = 0

@@ -2,8 +2,6 @@ extends Node2D
 
 var hovered = false
 
-var saved_nodes = []
-
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("del_node") and hovered and Vars.can_place_buildings:
@@ -12,7 +10,6 @@ func _process(delta: float) -> void:
 func _ready() -> void:
 	
 	add_to_group("BuildingsToSave")
-	
 	if position.x < -3136.0 or position.x > 3136.0 or position .y < -3136.0 or position.y > 3136.0:
 		queue_free()
 
@@ -29,3 +26,6 @@ func save():
 		"pos_x" : position.x,
 		"pos_y" : position.y
 	}
+
+func clear():
+	queue_free()

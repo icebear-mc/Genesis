@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uqbdxob58yky" path="res://scripts/save_map.gd" id="1_uxvdx"]
 [ext_resource type="Script" uid="uid://duie1iy7h6onq" path="res://scripts/load_map.gd" id="2_taxde"]
+[ext_resource type="Script" uid="uid://cnuahpnw7c6db" path="res://scenes/clear_map.gd" id="3_w6ndt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_taxde"]
 bg_color = Color(0.4862745, 0.8, 0.6156863, 1)
@@ -27,7 +28,7 @@ transform = Transform2D(1.1, 0, 0, 1.1, 0, 0)
 
 [node name="BackgroundPanel" type="Panel" parent="." unique_id=1961320398]
 offset_top = 43.63636
-offset_right = 222.72726
+offset_right = 346.36362
 offset_bottom = 104.09091
 scale = Vector2(2, 2)
 size_flags_horizontal = 4
@@ -59,6 +60,19 @@ text = "Load Map"
 clip_text = true
 script = ExtResource("2_taxde")
 
+[node name="LoadMap2" type="Button" parent="." unique_id=2121826090]
+offset_left = 441.81818
+offset_top = 91.81818
+offset_right = 652.72723
+offset_bottom = 146.81818
+theme = SubResource("Theme_w6ndt")
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_x4jqx")
+text = "Clear Map"
+clip_text = true
+script = ExtResource("3_w6ndt")
+
 [node name="GenesisCBLabel" type="Label" parent="." unique_id=659172454]
 material = SubResource("ShaderMaterial_bewml")
 offset_left = 12.727273
@@ -76,3 +90,6 @@ text = "Genesis CB"
 [connection signal="mouse_entered" from="LoadMap" to="LoadMap" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="LoadMap" to="LoadMap" method="_on_mouse_exited"]
 [connection signal="pressed" from="LoadMap" to="LoadMap" method="_on_pressed"]
+[connection signal="mouse_entered" from="LoadMap2" to="LoadMap2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="LoadMap2" to="LoadMap2" method="_on_mouse_exited"]
+[connection signal="pressed" from="LoadMap2" to="LoadMap2" method="_on_pressed"]

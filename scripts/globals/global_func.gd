@@ -71,6 +71,12 @@ func load_game():
 			
 func snap_to_grid(world_pos: Vector2):
 	return Vector2(
-		round((world_pos.x - Vars.grid_offset.x) / Vars.grid_size.x) * Vars.grid_size.x + Vars.grid_offset.x,
-		round((world_pos.y - Vars.grid_offset.y) / Vars.grid_size.y) * Vars.grid_size.y + Vars.grid_offset.y
+		round((world_pos.x - Grid.grid_offset.x) / Grid.grid_size.x) * Grid.grid_size.x + Grid.grid_offset.x,
+		round((world_pos.y - Grid.grid_offset.y) / Grid.grid_size.y) * Grid.grid_size.y + Grid.grid_offset.y
 	)
+	
+func clear_map():
+	var delete_nodes = get_tree().get_nodes_in_group("BuildingsToSave")
+	
+	for node in delete_nodes:
+		node.call("clear")
