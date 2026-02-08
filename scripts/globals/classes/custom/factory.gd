@@ -1,4 +1,5 @@
 extends BasicBuilding
+
 class_name Factory
 
 func _init() -> void:

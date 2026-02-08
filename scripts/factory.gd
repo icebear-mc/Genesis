@@ -1,4 +1,4 @@
-extends Node2D
+extends Factory
 
 var hovered = false
 var can_produce = true

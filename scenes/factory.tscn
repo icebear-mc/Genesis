@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://i1llvpr4t60a"]
 
 [ext_resource type="Script" uid="uid://birg1r62jnneh" path="res://scripts/factory.gd" id="1_lmr8u"]
-[ext_resource type="Texture2D" uid="uid://df154p8hu0k6y" path="res://assets/icons/factory.svg" id="2_lmr8u"]
+[ext_resource type="Texture2D" uid="uid://df154p8hu0k6y" path="res://assets/sprites/factory.svg" id="2_lmr8u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1adwy"]
 radius = 61.03278
@@ -9,7 +9,7 @@ radius = 61.03278
 [node name="Factory" type="Node2D" unique_id=1785093742 groups=["BuildingsToSave"]]
 script = ExtResource("1_lmr8u")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=263640437]
+[node name="Factory_Sprite" type="Sprite2D" parent="." unique_id=263640437]
 texture = ExtResource("2_lmr8u")
 
 [node name="AreaBox" type="Area2D" parent="." unique_id=867176720]

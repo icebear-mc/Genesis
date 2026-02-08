@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Genesis"
-config/version="0.3.0"
+config/version="0.3.1"
 run/main_scene="uid://cxwoig5vohwof"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0.50980395, 0.70980394, 1)
@@ -29,6 +29,9 @@ LogicSysFactory="*uid://bdaqeldhgbc1c"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 
