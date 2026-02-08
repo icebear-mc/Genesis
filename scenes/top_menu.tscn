@@ -1,13 +1,30 @@
 [gd_scene format=3 uid="uid://b68kwpurh6i5k"]
 
+[ext_resource type="Texture2D" uid="uid://cyu7vrvqxbs4k" path="res://assets/icons/ico-clear-map.svg" id="3_5kft6"]
+[ext_resource type="Texture2D" uid="uid://d2kyminpy1djd" path="res://assets/icons/ico-build-menu-popup.svg" id="4_k6k57"]
+[ext_resource type="Texture2D" uid="uid://dggq1kt6gg1di" path="res://assets/icons/ico-load-map.svg" id="4_mpvbp"]
+[ext_resource type="Script" uid="uid://bkmyy8cvk5ymo" path="res://scripts/GUI-Parts/clear_map_button.gd" id="5_7yowc"]
+[ext_resource type="Texture2D" uid="uid://b866yuca2b0hh" path="res://assets/icons/ico-save-map.svg" id="5_k6k57"]
 [ext_resource type="Texture2D" uid="uid://ehkyh4dgp02j" path="res://assets/icons/ico-energy.svg" id="5_mpvbp"]
+[ext_resource type="Script" uid="uid://c5bfl8p8pfe4o" path="res://scripts/GUI-Parts/load_map_button.gd" id="7_6cg1q"]
 [ext_resource type="Texture2D" uid="uid://kiy3m3dntdy4" path="res://assets/icons/ico-money.svg" id="7_k6k57"]
+[ext_resource type="Script" uid="uid://c00dq202pcvhm" path="res://scripts/GUI-Parts/clip_button.gd" id="7_mpvbp"]
+[ext_resource type="Script" uid="uid://b8qn7olnpfcms" path="res://scripts/GUI-Parts/save_map_button.gd" id="9_knumo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_327hm"]
 font_size = 50
 shadow_size = 10
 shadow_color = Color(0, 0, 0, 0.5019608)
 shadow_offset = Vector2(3.815, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vq3cn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kft6"]
+bg_color = Color(0.6, 1, 0.8862745, 0.69411767)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1982307454]
 
@@ -20,53 +37,124 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Root" unique_id=629323586]
+[node name="MaterialContainer" type="VBoxContainer" parent="Root" unique_id=629323586]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -408.0
-offset_bottom = 267.0
+offset_bottom = 159.0
 grow_horizontal = 0
+alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="Root/VBoxContainer" unique_id=948135453]
+[node name="Money" type="PanelContainer" parent="Root/MaterialContainer" unique_id=948135453]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Root/VBoxContainer/PanelContainer" unique_id=1000214062]
+[node name="MoneyAligner" type="HBoxContainer" parent="Root/MaterialContainer/Money" unique_id=1000214062]
 layout_mode = 2
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Root/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1350503367]
+[node name="MoneyIcon" type="TextureRect" parent="Root/MaterialContainer/Money/MoneyAligner" unique_id=1350503367]
 custom_minimum_size = Vector2(80, 20)
 layout_mode = 2
 texture = ExtResource("7_k6k57")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Root/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1653950941]
+[node name="MoneyText" type="Label" parent="Root/MaterialContainer/Money/MoneyAligner" unique_id=1653950941]
 layout_mode = 2
 text = "000000000"
 label_settings = SubResource("LabelSettings_327hm")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PanelContainer2" type="PanelContainer" parent="Root/VBoxContainer" unique_id=148706291]
+[node name="Energy" type="PanelContainer" parent="Root/MaterialContainer" unique_id=148706291]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Root/VBoxContainer/PanelContainer2" unique_id=2008203456]
+[node name="EnergyAlign" type="HBoxContainer" parent="Root/MaterialContainer/Energy" unique_id=2008203456]
 layout_mode = 2
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Root/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=1946809086]
+[node name="EnergyIcon" type="TextureRect" parent="Root/MaterialContainer/Energy/EnergyAlign" unique_id=1946809086]
 custom_minimum_size = Vector2(80, 20)
 layout_mode = 2
 texture = ExtResource("5_mpvbp")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Root/VBoxContainer/PanelContainer2/HBoxContainer" unique_id=2138007787]
+[node name="EnergyText" type="Label" parent="Root/MaterialContainer/Energy/EnergyAlign" unique_id=2138007787]
 layout_mode = 2
 text = "000000000"
 label_settings = SubResource("LabelSettings_327hm")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BMContainer" type="PanelContainer" parent="Root" unique_id=642914096]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -398.0
+offset_right = 138.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vq3cn")
+
+[node name="BMAligner" type="VBoxContainer" parent="Root/BMContainer" unique_id=1641952708]
+layout_mode = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="ClippableButtonsContainer" type="VBoxContainer" parent="Root/BMContainer/BMAligner" unique_id=2007205240]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="ClearMapButton" type="Button" parent="Root/BMContainer/BMAligner/ClippableButtonsContainer" unique_id=854650846]
+layout_mode = 2
+theme_override_constants/icon_max_width = 130
+theme_override_font_sizes/font_size = 70
+theme_override_icons/icon = ExtResource("3_5kft6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kft6")
+script = ExtResource("5_7yowc")
+
+[node name="LoadMapButton" type="Button" parent="Root/BMContainer/BMAligner/ClippableButtonsContainer" unique_id=1457508612]
+layout_mode = 2
+theme_override_constants/icon_max_width = 130
+theme_override_font_sizes/font_size = 70
+theme_override_icons/icon = ExtResource("4_mpvbp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kft6")
+script = ExtResource("7_6cg1q")
+
+[node name="SaveMapButton" type="Button" parent="Root/BMContainer/BMAligner/ClippableButtonsContainer" unique_id=1570243731]
+layout_mode = 2
+theme_override_constants/icon_max_width = 130
+theme_override_font_sizes/font_size = 70
+theme_override_icons/icon = ExtResource("5_k6k57")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5kft6")
+script = ExtResource("9_knumo")
+
+[node name="ClipButton" type="Button" parent="Root/BMContainer/BMAligner" unique_id=1185070358]
+layout_mode = 2
+theme_override_constants/icon_max_width = 130
+theme_override_font_sizes/font_size = 70
+theme_override_icons/icon = ExtResource("4_k6k57")
+toggle_mode = true
+script = ExtResource("7_mpvbp")
+
+[connection signal="mouse_entered" from="Root/MaterialContainer" to="Root/MaterialContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Root/MaterialContainer" to="Root/MaterialContainer" method="_on_mouse_exited"]
+[connection signal="gui_input" from="Root/BMContainer" to="Root/BMContainer" method="_on_gui_input"]
+[connection signal="mouse_entered" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/ClearMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/ClearMapButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/ClearMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/ClearMapButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/ClearMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/ClearMapButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/LoadMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/LoadMapButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/LoadMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/LoadMapButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/LoadMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/LoadMapButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/SaveMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/SaveMapButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/SaveMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/SaveMapButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Root/BMContainer/BMAligner/ClippableButtonsContainer/SaveMapButton" to="Root/BMContainer/BMAligner/ClippableButtonsContainer/SaveMapButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Root/BMContainer/BMAligner/ClipButton" to="Root/BMContainer/BMAligner/ClipButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Root/BMContainer/BMAligner/ClipButton" to="Root/BMContainer/BMAligner/ClipButton" method="_on_mouse_exited"]
+[connection signal="toggled" from="Root/BMContainer/BMAligner/ClipButton" to="Root/BMContainer/BMAligner/ClipButton" method="_on_toggled"]

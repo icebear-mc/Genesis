@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Genesis"
-config/version="0.3.1"
+config/version="0.4.0"
 run/main_scene="uid://cxwoig5vohwof"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0.50980395, 0.70980394, 1)
