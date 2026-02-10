@@ -2,13 +2,14 @@ extends Node2D
 
 var hovered = false
 var can_produce = true
+@export var cooldown = 0.5
+var running := true
 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("del_node") and hovered and Vars.can_place_buildings:
 		queue_free()
-
 		
 func process_frame():
 	if not can_produce:
@@ -17,15 +18,20 @@ func process_frame():
 	LogicSysFactory.consume_energy()
 	LogicSysFactory.produce()
 	
-	can_produce = false
-	await get_tree().create_timer(1.0).timeout
-	can_produce = true
+	
+	
+func run_loop():
+	while running:
+		process_frame()
+		await  get_tree().create_timer(cooldown).timeout
 
 func _ready() -> void:
 	
 	add_to_group("BuildingsToSave")
 	if position.x < -3136.0 or position.x > 3136.0 or position .y < -3136.0 or position.y > 3136.0:
 		queue_free()
+		
+	run_loop()
 
 func _on_area_2d_mouse_entered() -> void:
 	hovered = true
@@ -41,7 +47,9 @@ func save():
 		"pos_y" : position.y
 	}
 
-
-
 func clear():
+	queue_free()
+
+
+func _on_area_box_area_entered(_area: Area2D) -> void:
 	queue_free()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkxbpmfp1vn1r"
-path="res://.godot/imported/Factory.svg-e2f7e7728d98d512082ddffd86e42535.ctex"
+uid="uid://csd4mehia3ywv"
+path="res://.godot/imported/EnergyCenter.svg-690d27186dc6136bb7f983f8ac035aea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Factory.svg"
-dest_files=["res://.godot/imported/Factory.svg-e2f7e7728d98d512082ddffd86e42535.ctex"]
+source_file="res://assets/sprites/EnergyCenter.svg"
+dest_files=["res://.godot/imported/EnergyCenter.svg-690d27186dc6136bb7f983f8ac035aea.ctex"]
 
 [params]
 

@@ -17,24 +17,25 @@ func _ready() -> void:
 
 
 func _unhandled_input(event) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_MIDDLE:
-			dragging = event.pressed
+	if Vars.cam_can_move:
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_MIDDLE:
+				dragging = event.pressed
 
-		match event.button_index:
-			MOUSE_BUTTON_WHEEL_UP:
-				zoom += Vector2.ONE * zoom_speed
-			MOUSE_BUTTON_WHEEL_DOWN:
-				zoom -= Vector2.ONE * zoom_speed
+			match event.button_index:
+				MOUSE_BUTTON_WHEEL_UP:
+					zoom += Vector2.ONE * zoom_speed
+				MOUSE_BUTTON_WHEEL_DOWN:
+					zoom -= Vector2.ONE * zoom_speed
 
-	if event is InputEventMouseMotion and dragging:
-		global_position -= event.relative / zoom.x
+		if event is InputEventMouseMotion and dragging:
+			global_position -= event.relative / zoom.x
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	if Vars.cam_can_move:
+		zoom.x = clamp(zoom.x, min_zoom, max_zoom)
+		zoom.y = zoom.x
 
-	zoom.x = clamp(zoom.x, min_zoom, max_zoom)
-	zoom.y = zoom.x
-
-	global_position.x = clamp(global_position.x, world_min.x, world_max.x)
-	global_position.y = clamp(global_position.y, world_min.y, world_max.y)
+		global_position.x = clamp(global_position.x, world_min.x, world_max.x)
+		global_position.y = clamp(global_position.y, world_min.y, world_max.y)

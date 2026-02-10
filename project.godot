@@ -11,11 +11,11 @@ config_version=5
 [application]
 
 config/name="Genesis"
-config/version="0.4.0"
+config/version="0.5.0"
 run/main_scene="uid://cxwoig5vohwof"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0.50980395, 0.70980394, 1)
-config/icon="res://assets/icons/icon.svg"
+config/icon="uid://drdpwqqyy2w8k"
 
 [autoload]
 
@@ -23,6 +23,7 @@ Vars="*uid://crvfafrk7pffb"
 Funcs="*uid://53cg7sf0xhhq"
 Grid="*uid://dt6rltthqg5b1"
 LogicSysFactory="*uid://bdaqeldhgbc1c"
+LogicSysEnergy="*uid://bd65tq1gfgum"
 
 [display]
 

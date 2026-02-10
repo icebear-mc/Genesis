@@ -2,10 +2,11 @@ extends Node
 
 var factory = Factory.new()
 
-func produce():
-	Vars.money += 1
 
-	print(Vars.money)
+func produce():
+	Vars.energy += 10
+
+	print(Vars.energy)
 	
 func consume_energy():
 	match factory.energy_level:
@@ -17,8 +18,3 @@ func consume_energy():
 			Vars.energy -= 5
 		3: 
 			Vars.energy -= 8
-
-func update(cooldown: float) -> void:
-	produce()
-	consume_energy()
-	await get_tree().create_timer(cooldown).timeout

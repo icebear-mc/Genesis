@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1.100946,0,0,1.100946,-19.563681,-34.70939)">
-        <circle cx="72.268" cy="86.025" r="54.499" style="fill:rgb(215,247,235);fill-opacity:0.97;"/>
-    </g>
-    <g transform="matrix(1,0,0,1,-12.268468,-26.025464)">
-        <circle cx="72.268" cy="86.025" r="54.499" style="fill:rgb(219,255,242);"/>
-    </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><path d="M86.733,10.71l8.582,12.132l13.499,-6.216c4.096,1.862 8.001,4.117 11.662,6.733l1.366,14.798l14.798,1.366c2.616,3.661 4.871,7.566 6.733,11.662l-6.216,13.499l12.132,8.582c0.435,4.478 0.435,8.988 0,13.466l-12.132,8.582l6.216,13.499c-1.862,4.096 -4.117,8.001 -6.733,11.662l-14.798,1.366l-1.366,14.798c-3.661,2.616 -7.566,4.871 -11.662,6.733l-13.499,-6.216l-8.582,12.132c-4.478,0.435 -8.988,0.435 -13.466,-0l-8.582,-12.132l-13.499,6.216c-4.096,-1.862 -8.001,-4.117 -11.662,-6.733l-1.366,-14.798l-14.798,-1.366c-2.616,-3.661 -4.871,-7.566 -6.733,-11.662l6.216,-13.499l-12.132,-8.582c-0.435,-4.478 -0.435,-8.988 0,-13.466l12.132,-8.582l-6.216,-13.499c1.862,-4.096 4.117,-8.001 6.733,-11.662l14.798,-1.366l1.366,-14.798c3.661,-2.616 7.566,-4.871 11.662,-6.733l13.499,6.216l8.582,-12.132c4.478,-0.435 8.988,-0.435 13.466,0Zm-6.733,42.204c14.949,0 27.087,12.137 27.087,27.087c0,14.949 -12.137,27.087 -27.087,27.087c-14.949,0 -27.087,-12.137 -27.087,-27.087c0,-14.949 12.137,-27.087 27.087,-27.087Z" style="fill:#919191;stroke:#797979;stroke-width:1.11px;"/></svg>
