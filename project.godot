@@ -36,7 +36,7 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/grid_display/plugin.cfg")
+enabled=PackedStringArray("res://addons/genesis_api/plugin.cfg", "res://addons/grid_display/plugin.cfg")
 
 [global_group]
 
